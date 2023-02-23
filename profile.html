@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/profile.css" />
+
+    <title>Dharma Karya</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Dharma<span>Karya</span></a>
+
+      <div class="navbar-nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#visi-misi">Visi-Misi</a>
+        <a href="index.html#event">Acara</a>
+        <a href="index.html#message-us">Hubungi Kami</a>
+        <a href="#profile">Profil</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="notif"><i data-feather="bell"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End-->
+
+    <!-- Banner Slide -->
+    <div class="banner">
+      <img class="mySlides" src="img/banner/1.jpg" alt="" />
+      <img class="mySlides" src="img/banner/2.jpg" alt="" />
+      <img class="mySlides" src="img/banner/3.jpg" alt="" />
+      <img class="mySlides" src="img/banner/4.jpg" alt="" />
+      <img class="mySlides" src="img/banner/5.jpg" alt="" />
+      <img class="mySlides" src="img/banner/6.jpg" alt="" />
+      <img class="mySlides" src="img/banner/7.jpg" alt="" />
+      <img class="mySlides" src="img/banner/8.jpg" alt="" />
+      <div class="tombol">
+        <button class="previous" onclick="plusDivs(-1)">Previous</button>
+        <button class="next" onclick="plusDivs(1)">Next</button>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) slideIndex = 1;
+        else if (n < 1) slideIndex = x.length;
+
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+      }
+    </script>
+    <!-- Banner Slide End -->
+
+    <!-- Video -->
+    <div class="video">
+      <h2><span>Video </span>Kami</h2>
+      <video class="vid" controls>
+        <source src="video/watukodok.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
+      <video class="vid" controls>
+        <source src="video/dolanbareng.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- VIdeo End -->
+
+    <!-- Hubungi Kami Section -->
+    <div class="contact-us">
+      <h2><span>Hubungi </span>Kami</h2>
+      <p>Hubungi kami jika tertarik bekerjasama dengan Dharmakarya</p>
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.5999305600526!2d110.82852152241247!3d-7.618435559842122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a3d8d60b376e1%3A0xd4cdd20b919aa29b!2sMenggah%2C%20Pranan%2C%20Kec.%20Polokarto%2C%20Kabupaten%20Sukoharjo%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1677133559030!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama" />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="E-mail" />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="No. Handphone" />
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+    <!-- Hubungi Kami Section End -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+      <div class="links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#visi-misi">Visi-Misi</a>
+        <a href="index.html#event">Acara</a>
+        <a href="index.html#message-us">Hubungi Kami</a>
+        <a href="#profile">Profil</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">ArsyidNurRahman</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- FOoter End -->
+
+    <!-- Icon Js -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
